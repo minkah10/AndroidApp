@@ -39,7 +39,7 @@
         android:numStars="5"
         android:max="10"
         android:layout_gravity="center"/>
-    
+
 
 </LinearLayout>
 </ScrollView>

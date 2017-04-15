@@ -6,6 +6,6 @@
     <item
         android:id="@+id/menu_form_ok"
         android:title="OK"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/check_box_inv"
         app:showAsAction="always"/>
 </menu>
