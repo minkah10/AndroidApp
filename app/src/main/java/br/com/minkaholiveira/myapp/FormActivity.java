@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.Toast;
 
+import br.com.minkaholiveira.myapp.dao.AlunoDAO;
 import br.com.minkaholiveira.myapp.model.Aluno;
 
 public class FormActivity extends AppCompatActivity {
@@ -41,9 +42,12 @@ public class FormActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.menu_form_ok:
                 Aluno aluno = helper.getAluno();
+                AlunoDAO alunoDAO = new AlunoDAO(this);
+                alunoDAO.insert(aluno);
 
-                Toast.makeText(FormActivity.this, "Aluno "+aluno.getNome()+" "+aluno.getSobrenome()
-                                +"  Salvo!",
+                alunoDAO.close();
+
+                Toast.makeText(FormActivity.this, "Aluno "+aluno.getNome()+" adicionado com sucesso!",
                         Toast.LENGTH_SHORT).show();
                 finish();
             break;
